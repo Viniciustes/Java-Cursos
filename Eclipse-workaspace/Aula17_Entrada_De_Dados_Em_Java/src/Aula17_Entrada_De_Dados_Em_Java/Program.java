@@ -21,6 +21,7 @@ public class Program {
 		System.out.println(y);
 		System.out.println(z);
 		
+		System.out.println("---------------------------------------");
 		
 		scanner.close();
 	}
