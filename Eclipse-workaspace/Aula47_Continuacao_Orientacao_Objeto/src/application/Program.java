@@ -15,17 +15,19 @@ public class Program {
 
 		System.out.println("Enter product data");
 
-		var product = new Product();
-
 		System.out.print("Name: ");
-		product.name = scanner.nextLine();
+		var name = scanner.nextLine();
 
 		System.out.print("Price: ");
-		product.price = scanner.nextDouble();
+		var price = scanner.nextDouble();
 
 		System.out.print("Quantity in stock: ");
-		product.quantity = scanner.nextInt();
+		var quantity = scanner.nextInt();
 
+		var product = new Product(name, price, quantity);
+
+		product.setName("Computador");
+		
 		System.out.println(product);
 
 		System.out.println("Enter the number of products to be added in stock: ");
