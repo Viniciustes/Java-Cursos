@@ -17,7 +17,23 @@ public class UI {
 			System.out.println();
 		}
 
-		System.out.println("  a b c d e f g h");
+		printAlphabetLetter(pieces.length);
+	}
+
+	private static void printAlphabetLetter(int numberLetterPrint) {
+
+		var aux = 0;
+		for (char letter = 'a'; letter <= 'z'; letter++) {
+
+			if (aux == 0) {
+				System.out.print("  " + letter);
+			}
+			else if (aux < numberLetterPrint) {
+				System.out.print(" " + letter);
+			}
+
+			aux++;
+		}
 	}
 
 	private static void printPiece(ChessPiece piece) {
