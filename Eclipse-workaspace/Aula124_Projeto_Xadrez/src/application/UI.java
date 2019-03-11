@@ -27,9 +27,10 @@ public class UI {
 
 			if (aux == 0) {
 				System.out.print("  " + letter);
-			}
-			else if (aux < numberLetterPrint) {
+			} else if (aux < numberLetterPrint) {
 				System.out.print(" " + letter);
+			} else {
+				return;
 			}
 
 			aux++;
@@ -41,7 +42,7 @@ public class UI {
 		if (piece == null) {
 			System.out.print("-");
 		} else {
-			System.out.println(piece);
+			System.out.print(piece);
 		}
 
 		System.out.print(" ");
