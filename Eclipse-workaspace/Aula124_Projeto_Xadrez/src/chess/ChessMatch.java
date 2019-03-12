@@ -30,8 +30,12 @@ public class ChessMatch {
 		return chessPiece;
 	}
 
+	private void placeNewPiece(ChessPiece piece, char column, int row) {
+		board.placePiece(piece, new ChessPosition(column, row).toPosition());
+	}
+
 	private void initialSetup() {
-		board.placePiece(new Rook(board, Color.WHITE), new Position(1, 1));
-		board.placePiece(new Rook(board, Color.BLACK), new Position(3, 2));
+		placeNewPiece(new Rook(board, Color.WHITE), 'b', 6);
+		placeNewPiece(new Rook(board, Color.BLACK), 'c', 4);
 	}
 }
